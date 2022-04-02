@@ -40,9 +40,6 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
-}
-
 body {
   height: 100%;
   display: flex;
