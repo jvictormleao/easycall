@@ -4,7 +4,7 @@
     <!-- PAGE INFO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OriginSix</title>
+    <title>EasyCall | Login</title>
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -26,14 +26,14 @@
           <h2 class="title">Login</h2>
           
         </header>
-        <form action="main.html" class="login-form">
+        <form action="/login/authentication" method="post" class="login-form">
           <div class="form-user">
           <label for="flogin"><h4>LOGIN</h4><label>
-          <input type="text" id="flogin" />
+          <input type="text" name="flogin" id="flogin" />
         </div>
         <div class="form-senha">
           <label for="fpass" class="password"><h4>SENHA</h4></label>
-          <input type="text" id="fpass" />
+          <input id="fpass" name="fpass" type="password">
         </div>
           <div class="form-buttons">
           <a href="" class="senha">Esqueceu sua senha?</a>
@@ -51,6 +51,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- main.js -->
-    <script src="main.js"></script>
+    <script src="javascripts/main.js"></script>
   </body>
 </html>
