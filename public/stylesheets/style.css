@@ -164,36 +164,11 @@ section {
   background-color: green !important;
 }
 
-#login .divider-login-cadastro {
-  gap: 0.5rem;
+.navbar {
+  position: fixed;
+  margin-top: 0px;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
+  height: 4rem;
+  background-color: black;
 
-  align-items: center;
-}
-
-#cadastro {
-  display: grid;
-  gap: 1rem;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-}
-
-#cadastro header {
-  padding: 0.5rem;
-  margin: 0;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid gray;
-}
-
-.cadastro {
-  padding: 1.5rem;
-  height: auto;
-  width: auto;
-  border: 1px solid black;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
-  border-radius: 0.75rem;
 }
