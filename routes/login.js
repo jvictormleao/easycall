@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var Login = require('../models/user')
+const erro = 'Usuário ou senha incorreta'
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -23,7 +24,6 @@ router.post('/login/authentication', async (req, res, next) => {
       if (user.senha === req.body.fpass) {
         return res.redirect('/main?data=' + user._id)
       } else {
-        var erro = 'Usuário ou senha incorreta'
         return res.redirect('/login?erro=' + erro)
       }
     } catch (err) {
