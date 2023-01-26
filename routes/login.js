@@ -3,10 +3,14 @@ var router = express.Router()
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  res.redirect('login')
+})
+
+router.get('/login', function(req, res, next){
   res.render('login')
 })
 
-router.post('/authentication', function (req, res, next) {
+router.post('/login/authentication', function (req, res, next) {
   if (req.body.flogin == 'Admin' && req.body.fpass == 'Admin') {
     var auth = 'R0TTH3N'
     res.redirect('/main?data=' + auth)

@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/login', loginRouter)
+app.use('/', loginRouter)
 app.use('/main', mainRouter)
 
 // catch 404 and forward to error handler
