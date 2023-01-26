@@ -41,6 +41,7 @@ html {
 }
 
 body {
+  height: 100%;
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
@@ -79,10 +80,15 @@ body {
 }
 
 section {
-  padding-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-main #login{
+main {
+  height: 100%;
+}
+
+#login {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -188,28 +194,35 @@ main #login{
 }
 
 #header .menu {
-width: 100%;
-display: flex;
-justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#header .menu a.user,
-#header .menu a.mail{
+#header .menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
   margin: 0.25rem;
   padding: 0;
 }
 
-#header .menu a i{
+#header .menu a i {
   font-size: 3rem;
 }
 
-#header .menu  span{
+#header .menu span {
   font-size: 2rem;
 }
 
-#header .menu a.mail{
+#header .menu a.mail {
   color: black;
   margin: 0.25rem;
   padding: 0;
+}
+
+#main {
+  margin-top: 5rem;
+  border: 1px solid;
 }

@@ -1,22 +1,34 @@
 var express = require('express')
 var router = express.Router()
+var Login = require('../models/user')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.redirect('login')
 })
 
-router.get('/login', function(req, res, next){
-  res.render('login')
+router.get('/login', function (req, res, next) {
+  var passedVariable = req.query.erro
+  res.render('login', { erro: passedVariable })
 })
 
-router.post('/login/authentication', function (req, res, next) {
-  if (req.body.flogin == 'Admin' && req.body.fpass == 'Admin') {
-    var auth = 'R0TTH3N'
-    res.redirect('/main?data=' + auth)
+router.post('/login/authentication', async (req, res, next) => {
+  if (req.body.flogin == '' && req.body.fpass == '') {
+    res.redirect('/login')
   } else {
-    res.send('ERRO')
-    console.log('Usuário ou senha invalido')
+    try {
+      const user = await Login.findOne({
+        login: req.body.flogin
+      })
+      if (user.senha === req.body.fpass) {
+        return res.redirect('/main?data=' + user._id)
+      } else {
+        var erro = 'Usuário ou senha incorreta'
+        return res.redirect('/login?erro=' + erro)
+      }
+    } catch (err) {
+      return res.redirect('/login?erro=' + erro)
+    }
   }
 })
 
