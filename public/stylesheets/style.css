@@ -207,7 +207,6 @@ body {
 
 #header .menu span {
   font-size: 2rem;
-  text-align: center;
 }
 
 main section {
@@ -226,29 +225,44 @@ main section {
 main #novochamado {
   opacity: 0;
   visibility: hidden;
+  left: -50rem;
+  right: 100rem;
+  transition: opacity 0.3s, left 0.4s, right 0.4s;
 }
 
 main #novochamado.show {
   opacity: 1;
   visibility: visible;
+  left: 5rem;
+  right: 5rem;
 }
 
 main #meuschamados {
   opacity: 0;
   visibility: hidden;
+  left: -50rem;
+  right: 100rem;
+  transition: opacity 0.3s, left 0.4s, right 0.4s;
 }
 
 main #meuschamados.show {
   opacity: 1;
   visibility: visible;
+  left: 5rem;
+  right: 5rem;
 }
 
 main #perfil {
   opacity: 0;
+  left: -50rem;
+  right: 100rem;
   visibility: hidden;
+  transition: opacity 0.3s, left 0.4s, right 0.4s;
 }
 
 main #perfil.show {
   opacity: 1;
   visibility: visible;
+  left: 5rem;
+  right: 5rem;
 }
