@@ -37,11 +37,13 @@ img {
 /*===  BASE ============================ */
 html {
   height: 100%;
+  width: 100%;
   scroll-behavior: smooth;
 }
 
 body {
   height: 100%;
+  width: 100%;
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
@@ -79,19 +81,11 @@ body {
   background: var(--base-color-alt);
 }
 
-section {
-  margin-top: 5rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-main {
-  height: 100%;
-}
-
 #login {
   margin-top: -5rem;
+  margin-left: -5rem;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,20 +185,17 @@ main {
   background-color: var(--body-color);
   border-bottom: 1px solid #e4e4e4;
   box-shadow: 0 5px 5px gray;
-  margin-bottom: 2rem;
   display: flex;
 }
 
 #header .menu {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 #header .menu a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: black;
   margin: 0.25rem;
   padding: 0;
@@ -218,20 +209,45 @@ main {
   font-size: 2rem;
 }
 
-#header .menu a.mail {
-  color: black;
-  margin: 0.25rem;
-  padding: 0;
+main section {
+  padding: 2rem;
+  position: fixed;
+  z-index: 100;
+  left: 5rem;
+  top: 5rem;
+  bottom: 5rem;
+  right: 5rem;
+  background-color: var(--body-color);
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 5px 5px gray;
 }
 
-#novochamado {
+main #novochamado {
+  opacity: 0;
   visibility: hidden;
 }
 
-#meuschamados {
+main #novochamado.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+main #meuschamados {
+  opacity: 0;
   visibility: hidden;
 }
 
-#perfil {
+main #meuschamados.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+main #perfil {
+  opacity: 0;
   visibility: hidden;
+}
+
+main #perfil.show {
+  opacity: 1;
+  visibility: visible;
 }

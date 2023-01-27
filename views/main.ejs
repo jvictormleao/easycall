@@ -29,29 +29,37 @@
   <body>
     <header id="header">
       <div class="menu">
-        <a href="#" class="mail">
-          <i class="icon-plus-square"></i>
-          <span>Novo chamado</span>
+        <a href="#">
+          <span>EasyCall</span>
         </a>
-
-        <a href="#" class="user">
-          <i class="icon-user"></i>
-          <span>Perfil</span>
-        </a>
+        <div class="menu-r">
+          <a href="#" id="novochamado">
+            <i class="icon-plus-square"></i>
+            <span>Novo chamado</span>
+          </a>
+          <a href="#" id="meuschamados">
+            <i class="icon-archive"></i>
+            <span>Meus chamados</span>
+          </a>
+          <a href="#" id="perfil">
+            <i class="icon-user"></i>
+            <span>Perfil</span>
+          </a>
+        </div>
       </div>
     </header>
 
     <main>
       <section id="novochamado">
-        <p>USER: <%= data %></p>
+        <p>Novo chamado</p>
       </section>
 
       <section id="meuschamados">
-        <p>USER: <%= data %></p>
+        <p>Meus chamados</p>
       </section>
 
       <section id="perfil">
-        <p>USER: <%= data %></p>
+        <p>Perfil</p>
       </section>
     </main>
 

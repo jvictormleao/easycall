@@ -79,3 +79,42 @@
 .icon-display1:before {
   content: '\e957';
 }
+.icon-chevron-up:before {
+  content: '\e900';
+}
+.icon-phone:before {
+  content: '\e901';
+}
+.icon-close:before {
+  content: '\e902';
+}
+.icon-cosmetic:before {
+  content: '\e903';
+}
+.icon-facebook:before {
+  content: '\e904';
+}
+.icon-instagram:before {
+  content: '\e905';
+}
+.icon-mail:before {
+  content: '\e906';
+}
+.icon-map-pin:before {
+  content: '\e907';
+}
+.icon-menu:before {
+  content: '\e908';
+}
+.icon-trim:before {
+  content: '\e909';
+}
+.icon-whatsapp:before {
+  content: '\e90a';
+}
+.icon-woman-hair:before {
+  content: '\e90b';
+}
+.icon-youtube:before {
+  content: '\e90c';
+}
