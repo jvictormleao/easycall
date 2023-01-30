@@ -230,6 +230,13 @@ main #novochamado {
   transition: opacity 0.3s, left 0.4s, right 0.4s;
 }
 
+main header {
+  padding: 0.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid gray;
+}
+
 main #novochamado.show {
   opacity: 1;
   visibility: visible;
