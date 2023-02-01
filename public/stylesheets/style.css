@@ -180,7 +180,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 90;
   width: 100%;
   height: 3rem;
   background-color: var(--body-color);
@@ -207,14 +207,18 @@ nav ul li {
   text-align: center;
 }
 
-#header nav ul li.items a {
+nav ul li.items a {
   font-size: 2rem;
   color: black;
   position: relative;
   transition: color 1s;
 }
 
-#header nav ul li.items a::after {
+nav ul li.items a:hover {
+  color: red;
+}
+
+nav ul li.items a::after {
   content: '';
   width: 0%;
   height: 2px;
@@ -226,53 +230,42 @@ nav ul li {
   transition: width 1s;
 }
 
-#header nav ul li.items a:hover {
-  color: red;
-}
-
-#header nav ul li.items a:hover::after {
+nav ul li.items a:hover::after {
   width: 100%;
 }
 
-#header nav ul li.mobile {
-  font-size: 2rem;
+nav .icon-menu1 {
+  position: fixed;
   color: black;
-  display: none;
+  font-size: 2rem;
+  top: -2rem;
+  right: 2rem;
+  z-index: 90;
+  visibility: hidden;
+  opacity: 0;
 }
 
-/* APLICAÇÃO MEDIA QUERIES */
-@media (max-width: 850px) {
-  #header nav ul li.items {
-    display: none;
-  }
+nav .icon-menu1.hidden {
+  visibility: hidden;
+  margin-top: -3rem;
+  transition: 1s;
+}
 
-  #header nav ul li.mobile {
-    display: block;
-  }
-
-  #header nav ul.menu li {
-    opacity: 1;
-    visibility: visible;
-    background: var(--body-color);
-    color: black;
-
-    height: 100vh;
-    width: 100vw;
-
-    position: fixed;
-    top: 0;
-    left: -0.75rem;
-
-    display: grid;
-    gap: 2rem;
-    place-content: center;
-  }
+nav .icon-close {
+  position: fixed;
+  color: black;
+  font-size: 2rem;
+  top: -2rem;
+  right: 2rem;
+  z-index: 105;
+  visibility: hidden;
+  opacity: 0;
 }
 
 main section {
   padding: 2rem;
   position: fixed;
-  z-index: 100;
+  z-index: 85;
   left: 5rem;
   top: 5rem;
   bottom: 2rem;
@@ -280,6 +273,13 @@ main section {
   background-color: var(--body-color);
   border-bottom: 1px solid #e4e4e4;
   box-shadow: 0 5px 5px gray;
+}
+
+main header {
+  padding: 0.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid gray;
 }
 
 main #novochamado {
@@ -290,18 +290,11 @@ main #novochamado {
   transition: opacity 0.3s, left 0.4s, right 0.4s;
 }
 
-main header {
-  padding: 0.5rem;
-  margin: 0;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid gray;
-}
-
 main #novochamado.show {
   opacity: 1;
   visibility: visible;
-  left: 2rem;
-  right: 2rem;
+  left: 5rem;
+  right: 5rem;
 }
 
 main #meuschamados {
@@ -315,8 +308,8 @@ main #meuschamados {
 main #meuschamados.show {
   opacity: 1;
   visibility: visible;
-  left: 2rem;
-  right: 2rem;
+  left: 5rem;
+  right: 5rem;
 }
 
 main #perfil {
@@ -330,6 +323,79 @@ main #perfil {
 main #perfil.show {
   opacity: 1;
   visibility: visible;
-  left: 2rem;
-  right: 2rem;
+  left: 5rem;
+  right: 5rem;
+}
+
+/* APLICAÇÃO MEDIA QUERIES */
+@media (max-width: 850px) {
+  nav ul li.items {
+    display: none;
+  }
+
+  nav .icon-menu1 {
+    top: 0.5rem;
+    right: 2rem;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav ul.menu {
+    opacity: 0;
+    visibility: hidden;
+    background: var(--body-color);
+    color: black;
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    z-index: 95;
+    top: -40rem;
+    left: 0;
+
+    display: grid;
+    gap: 2rem;
+    place-content: center;
+    transition: 0.2s;
+  }
+
+  nav ul.menu.show {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav ul li.items.show {
+    display: block;
+  }
+
+  nav .icon-close.show {
+    top: 0.5rem;
+    right: 2rem;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+  }
+
+  main #novochamado.show {
+    opacity: 1;
+    visibility: visible;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  main #meuschamados.show {
+    opacity: 1;
+    visibility: visible;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  main #perfil.show {
+    opacity: 1;
+    visibility: visible;
+    left: 2rem;
+    right: 2rem;
+  }
 }
