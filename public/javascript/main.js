@@ -29,14 +29,14 @@ for (const item of items) {
     item.addEventListener('click', function () {
       if (item.id === aba.id) {
         aba.classList.toggle('show')
-        nav.classList.toggle('show')
-        close.classList.toggle('show')
-        menu.classList.toggle('hidden')
+        nav.classList.remove('show')
+        close.classList.remove('show')
+        menu.classList.remove('hidden')
       } else {
         aba.classList.remove('show')
-        nav.classList.toggle('show')
-        close.classList.toggle('show')
-        menu.classList.toggle('hidden')
+        nav.classList.remove('show')
+        close.classList.remove('show')
+        menu.classList.remove('hidden')
       }
     })
   }
