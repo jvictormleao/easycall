@@ -329,6 +329,12 @@ main #perfil.show {
 
 /* APLICAÇÃO MEDIA QUERIES */
 @media (max-width: 850px) {
+  nav ul li {
+    margin-left: 0;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
   nav ul li.items {
     display: none;
   }
@@ -397,5 +403,8 @@ main #perfil.show {
     visibility: visible;
     left: 2rem;
     right: 2rem;
+  }
+  section header i {
+    font-size: 2rem;
   }
 }

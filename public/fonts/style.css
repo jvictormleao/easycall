@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9cx1of');
-  src:  url('fonts/icomoon.eot?9cx1of#iefix') format('embedded-opentype'),
+  src: url('fonts/icomoon.eot?9cx1of');
+  src: url('fonts/icomoon.eot?9cx1of#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?9cx1of') format('truetype'),
     url('fonts/icomoon.woff?9cx1of') format('woff'),
     url('fonts/icomoon.svg?9cx1of#icomoon') format('svg');
@@ -10,7 +10,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,35 +27,35 @@
 }
 
 .icon-clear:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-close:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-keyboard_arrow_right:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-keyboard_arrow_down:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-log-out:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-log-in:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-file-plus:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-inbox:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-menu1:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-user:before {
-  content: "\e908";
+  content: '\e908';
 }
 .icon-menu:before {
-  content: "\e9bd";
+  content: '\e9bd';
 }
