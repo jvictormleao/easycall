@@ -6,7 +6,8 @@
     "start": "pm2 start ./bin/www -i 3 --watch",
     "dev": "nodemon --ext *  js,html,ejs,css,scss ./bin/www",
     "ncu": "npm install -g npm-check-updates",
-    "update-modules": "ncu -u && npm install"
+    "update-modules": "ncu -u && npm install",
+    "pm2-update": "npm install pm2@latest -g"
   },
   "dependencies": {
     "cookie-parser": "~1.4.6",
