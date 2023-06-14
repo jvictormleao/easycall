@@ -262,6 +262,13 @@ nav .icon-close {
   opacity: 0;
 }
 
+main .session {
+  position: fixed;
+  z-index: 85;
+  right: 0.3rem;
+  bottom: 0.3rem;
+}
+
 main section {
   padding: 2rem;
   position: fixed;
