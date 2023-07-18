@@ -284,6 +284,8 @@ main section {
 
 main header {
   padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   margin-bottom: 2rem;
   border-bottom: 1px solid gray;
