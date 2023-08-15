@@ -5,7 +5,17 @@ const nav = document.querySelector('nav ul.menu')
 const items = document.querySelectorAll('nav ul li.items')
 const date = new Date()
 const data = date.toLocaleDateString() + ' | ' + date.toLocaleTimeString()
-document.getElementById('systemdate').innerHTML = '<p>' + data + '</p>'
+
+setInterval(function () {
+  var horasistemas = document.querySelectorAll('#systemdate')
+  const date = new Date()
+  const data = date.toLocaleDateString() + ' | ' + date.toLocaleTimeString()
+  for (var horasistema of horasistemas) {
+    horasistema.innerHTML = '<p>' + data + '</p>'
+  }
+}, 1000)
+
+//document.getElementById('systemdate').innerHTML = '<p>' + data + '</p>'
 
 menu.addEventListener('click', function () {
   nav.classList.add('show')
