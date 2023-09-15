@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./bin/www -i 2 --watch",
+    "start": "pm2 start ./bin/www -i all --watch",
     "dev": "nodemon --ext *  js,html,ejs,css,scss ./bin/www",
     "ncu": "npm install -g npm-check-updates",
     "update-modules": "ncu -u && npm install",
