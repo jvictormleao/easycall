@@ -10,6 +10,7 @@ var connectLiveReload = require('connect-livereload')
 var loginRouter = require('./routes/login')
 var mainRouter = require('./routes/main')
 var userRouter = require('./routes/user')
+var chamadoRouter = require('./routes/chamado')
 
 const liveReloadServer = livereload.createServer()
 liveReloadServer.server.once('connection', () => {
@@ -37,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', loginRouter)
 app.use('/main', mainRouter)
 app.use('/user', userRouter)
+app.use('/chamado', chamadoRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

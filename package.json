@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./bin/www -i all --watch",
+    "start": "pm2 start ./bin/www -i 3 --watch",
     "dev": "nodemon --ext *  js,html,ejs,css,scss ./bin/www",
     "ncu": "npm install -g npm-check-updates",
     "update-modules": "ncu -u && npm install",
@@ -16,9 +16,9 @@
     "ejs": "^3.1.9",
     "express": "~4.18.2",
     "http-errors": "~2.0.0",
-    "mongoose": "^7.4.3",
+    "mongoose": "^8.1.3",
     "morgan": "~1.10.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.3"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",

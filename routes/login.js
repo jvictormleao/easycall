@@ -36,10 +36,10 @@ router.post('/login/authentication', async (req, res, next) => {
         })
         return res.redirect('/main')
       } else {
-        return res.redirect('/login?erro=' + erro)
+        return res.redirect('/login?erro=' + err)
       }
     } catch (err) {
-      return res.redirect('/login?erro=' + erro)
+      return res.redirect('/login?erro=' + err)
     }
   }
 })
